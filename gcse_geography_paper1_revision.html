@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AQA GCSE Geography Paper 1 — Complete Revision Notes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a2e;
+    --paper: #fafaf7;
+    --accent: #c0392b;
+    --accent2: #2471a3;
+    --accent3: #1e8449;
+    --accent4: #7d3c98;
+    --accent5: #d4860b;
+    --light: #f0f0eb;
+    --border: #d0d0c8;
+    --heading-font: 'Playfair Display', Georgia, serif;
+    --body-font: 'Source Sans 3', Arial, sans-serif;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body-font);
+    font-size: 11.5pt;
+    line-height: 1.55;
+    padding: 0;
+  }
+
+  /* PRINT STYLES */
+  @media print {
+    body { font-size: 10pt; }
+    .no-print { display: none; }
+    .section { page-break-inside: avoid; }
+    h2 { page-break-before: always; }
+    h2:first-of-type { page-break-before: avoid; }
+    .grid-2, .grid-3 { display: block; }
+    .grid-2 > *, .grid-3 > * { margin-bottom: 8pt; }
+  }
+
+  /* COVER */
+  .cover {
+    background: var(--ink);
+    color: white;
+    padding: 32px 40px 28px;
+    border-bottom: 6px solid var(--accent);
+  }
+  .cover h1 {
+    font-family: var(--heading-font);
+    font-size: 28pt;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+  .cover .sub {
+    font-size: 12pt;
+    margin-top: 6px;
+    opacity: 0.75;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .cover .tags {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* LAYOUT */
+  .page { max-width: 900px; margin: 0 auto; padding: 0 32px 40px; }
+
+  /* SECTION HEADERS */
+  h2 {
+    font-family: var(--heading-font);
+    font-size: 18pt;
+    font-weight: 900;
+    margin: 30px 0 12px;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 4px;
+  }
+  h2.nat  { background: var(--accent); }
+  h2.liv  { background: var(--accent3); }
+  h2.phys { background: var(--accent2); }
+
+  h3 {
+    font-family: var(--heading-font);
+    font-size: 13pt;
+    font-weight: 700;
+    margin: 18px 0 6px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--border);
+    color: var(--ink);
+  }
+
+  h4 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    margin: 12px 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+  }
+
+  /* GRIDS */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .card.red    { border-left: 4px solid var(--accent); }
+  .card.blue   { border-left: 4px solid var(--accent2); }
+  .card.green  { border-left: 4px solid var(--accent3); }
+  .card.purple { border-left: 4px solid var(--accent4); }
+  .card.orange { border-left: 4px solid var(--accent5); }
+  .card strong { display: block; margin-bottom: 4px; font-size: 10.5pt; }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10.5pt; }
+  th { background: var(--ink); color: white; padding: 7px 10px; text-align: left; font-weight: 600; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--light); }
+
+  /* KEYBOX */
+  .keybox {
+    background: #fff8e1;
+    border: 2px solid var(--accent5);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 10.5pt;
+  }
+  .keybox::before {
+    content: "⭐ KEY EXAM POINT: ";
+    font-weight: 700;
+    color: var(--accent5);
+  }
+
+  /* CASE STUDY BOX */
+  .casebox {
+    background: #eaf4fb;
+    border: 2px solid var(--accent2);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 10.5pt;
+  }
+  .casebox::before {
+    content: "📍 CASE STUDY: ";
+    font-weight: 700;
+    color: var(--accent2);
+  }
+
+  ul { padding-left: 18px; margin: 4px 0; }
+  li { margin-bottom: 2px; }
+  p { margin: 6px 0; }
+
+  .divider {
+    border: none;
+    border-top: 3px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .section { margin-bottom: 8px; }
+
+  .no-print {
+    text-align: center;
+    padding: 16px;
+    background: var(--ink);
+    color: white;
+    font-size: 11pt;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .no-print button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 12pt;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 16px;
+  }
+  .no-print button:hover { background: #a93226; }
+
+  .toc {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin: 18px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px 20px;
+    font-size: 10.5pt;
+  }
+  .toc-item { padding: 2px 0; }
+  .toc-item span { font-weight: 700; margin-right: 6px; }
+</style>
+</head>
+<body>
+
+<div class="no-print" style="padding:14px 32px; text-align:right; background:#1a1a2e;">
+  <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<div class="cover">
+  <div class="page" style="padding-top:0;padding-bottom:0;">
+    <h1>AQA GCSE Geography<br>Paper 1 Revision</h1>
+    <div class="sub">Living with the Physical Environment · 8035/1</div>
+    <div class="tags">
+      <span class="tag">Section A: Natural Hazards</span>
+      <span class="tag">Section B: The Living World</span>
+      <span class="tag">Section C: Physical Landscapes UK</span>
+      <span class="tag">1 hr 30 min · 88 marks</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-item"><span>A1</span>Tectonic Hazards</div>
+    <div class="toc-item"><span>A2</span>Weather Hazards</div>
+    <div class="toc-item"><span>A3</span>Climate Change</div>
+    <div class="toc-item"><span>B1</span>Ecosystems</div>
+    <div class="toc-item"><span>B2</span>Tropical Rainforests</div>
+    <div class="toc-item"><span>B3</span>Hot Deserts</div>
+    <div class="toc-item"><span>C1</span>Coastal Landscapes</div>
+    <div class="toc-item"><span>C2</span>River Landscapes</div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION A: NATURAL HAZARDS -->
+  <!-- ============================================================ -->
+
+  <h2 class="nat">SECTION A — THE CHALLENGE OF NATURAL HAZARDS</h2>
+
+  <div class="section">
+    <h3>A1 · Tectonic Hazards</h3>
+
+    <h4>Plate Boundaries</h4>
+    <table>
+      <tr><th>Boundary Type</th><th>Movement</th><th>Hazards</th><th>Example</th></tr>
+      <tr><td><strong>Destructive</strong></td><td>Oceanic sinks under continental (subduction)</td><td>Powerful earthquakes + explosive volcanoes</td><td>Andes, Japan</td></tr>
+      <tr><td><strong>Constructive</strong></td><td>Plates move apart (diverge)</td><td>Earthquakes + gentle volcanoes</td><td>Mid-Atlantic Ridge, Iceland</td></tr>
+      <tr><td><strong>Conservative</strong></td><td>Plates slide past each other</td><td>Earthquakes ONLY (no volcanoes)</td><td>San Andreas Fault, USA</td></tr>
+      <tr><td><strong>Collision</strong></td><td>Two continental plates collide</td><td>Fold mountains, earthquakes (no volcanoes)</td><td>Himalayas</td></tr>
+    </table>
+    <div class="keybox">Conservative = NO volcanoes. Plates slide sideways — no magma rises. This is a favourite trick question.</div>
+
+    <h4>Why People Live Near Tectonic Hazards</h4>
+    <ul>
+      <li>Fertile volcanic soil (e.g. farming on Java, Indonesia)</li>
+      <li>Geothermal energy (Iceland)</li>
+      <li>Tourism (Hawaii)</li>
+      <li>Lack of choice / poverty — can't afford to move</li>
+      <li>Short return period — hasn't happened in their lifetime, so risk feels low</li>
+    </ul>
+
+    <h4>Effects of Earthquakes: Primary vs Secondary</h4>
+    <div class="grid-2">
+      <div class="card red">
+        <strong>Primary (immediate, caused directly by shaking)</strong>
+        <ul>
+          <li>Buildings collapse</li>
+          <li>Roads/bridges crack</li>
+          <li>People killed/injured</li>
+          <li>Gas pipes rupture</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <strong>Secondary (follow-on effects)</strong>
+        <ul>
+          <li>Fires from broken gas pipes</li>
+          <li>Tsunamis</li>
+          <li>Landslides</li>
+          <li>Disease from contaminated water</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Responses: Immediate vs Long-Term</h4>
+    <div class="grid-2">
+      <div class="card blue">
+        <strong>Immediate (within days/weeks)</strong>
+        <ul>
+          <li>Search and rescue</li>
+          <li>Emergency food, water, shelter</li>
+          <li>Field hospitals</li>
+          <li>International aid sent</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <strong>Long-term (months/years)</strong>
+        <ul>
+          <li>Rebuilding homes and infrastructure</li>
+          <li>Improved building regulations (earthquake-proof buildings)</li>
+          <li>Monitoring systems installed</li>
+          <li>Economic recovery plans</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="casebox">
+      <strong>Nepal Earthquake 2015 (LIC/NEE) vs Chile Earthquake 2010 (HIC)</strong><br>
+      Nepal: 9,000 killed, 3.5 million homeless, poor infrastructure, slow aid delivery, mountainous terrain blocked rescue. Long-term: $10bn reconstruction needed.<br>
+      Chile: 500 killed (better building codes), quick government response, early warning systems existed, rapid rebuilding. Shows how wealth = fewer deaths.
+    </div>
+
+    <div class="casebox">
+      <strong>Montserrat Volcano 1995–97 (LIC)</strong><br>
+      Soufrière Hills erupted. Southern half of island abandoned. Capital Plymouth buried in ash. 19 deaths. Immediate: evacuation zones set up. Long-term: northern half redeveloped, tourism increased (volcano tourism). Economy slowly recovered with UK aid.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>A2 · Weather Hazards — Tropical Storms</h3>
+
+    <h4>How Tropical Storms Form</h4>
+    <ol style="padding-left:18px;">
+      <li>Form over warm ocean water (above <strong>27°C</strong>)</li>
+      <li>Warm, moist air rises rapidly → low pressure created</li>
+      <li>Water vapour condenses → releases energy → storms intensify</li>
+      <li>Earth's rotation (Coriolis effect) causes spinning</li>
+      <li>Storms weaken when they hit land — no more warm water = no fuel</li>
+    </ol>
+    <div class="keybox">They form between 5°–20° north/south of equator. NOT at the equator (no Coriolis effect there).</div>
+
+    <h4>Structure of a Tropical Storm</h4>
+    <ul>
+      <li><strong>Eye</strong> — calm centre, low pressure, clear skies, light winds</li>
+      <li><strong>Eyewall</strong> — most violent winds and rainfall, surrounds the eye</li>
+      <li><strong>Spiral rainbands</strong> — heavy rain extending outwards</li>
+    </ul>
+
+    <h4>Effects & Responses</h4>
+    <div class="casebox">
+      <strong>Typhoon Haiyan, Philippines 2013 (LIC/NEE)</strong><br>
+      <em>Effects:</em> 6,300+ killed, 4 million homeless, 90% of Tacloban destroyed, storm surge 7m high, crops destroyed, disease outbreaks.<br>
+      <em>Immediate:</em> International aid (UN, UK, USA), military helicopters, emergency food drops.<br>
+      <em>Long-term:</em> Rebuilding took years, new sea defences, better warning systems, mangrove replanting.
+    </div>
+
+    <h4>Reducing the Effects of Tropical Storms</h4>
+    <div class="grid-3">
+      <div class="card red"><strong>Monitoring</strong>Satellites track storm paths; wind speed measured; storm surges predicted</div>
+      <div class="card blue"><strong>Prediction</strong>Computer models forecast path 3–5 days ahead; Hurricane Watch (USA) gives 48hr warnings</div>
+      <div class="card green"><strong>Protection</strong>Sea walls, storm shelters, building regulations (raised houses), mangroves reduce wave energy</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>A3 · Climate Change</h3>
+
+    <h4>Evidence for Climate Change</h4>
+    <ul>
+      <li>Global temperatures risen ~1.2°C since pre-industrial times</li>
+      <li>Ice cores show CO₂ levels higher than at any point in 800,000 years</li>
+      <li>Glaciers retreating worldwide</li>
+      <li>Sea levels rising (~3.3mm/year)</li>
+      <li>Arctic sea ice shrinking</li>
+    </ul>
+
+    <h4>Causes: Natural vs Human</h4>
+    <div class="grid-2">
+      <div class="card orange">
+        <strong>Natural causes</strong>
+        <ul>
+          <li><strong>Milankovitch cycles</strong> — changes in Earth's orbit around the Sun</li>
+          <li><strong>Solar output</strong> — sunspot cycles (11-year cycle)</li>
+          <li><strong>Volcanic eruptions</strong> — ash reflects sunlight (short-term cooling); CO₂ (long-term warming)</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <strong>Human causes (Enhanced Greenhouse Effect)</strong>
+        <ul>
+          <li>Burning fossil fuels → CO₂</li>
+          <li>Deforestation → less CO₂ absorbed</li>
+          <li>Agriculture → methane (cattle, rice paddies)</li>
+          <li>Landfill → methane</li>
+          <li>Industry → nitrous oxide</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Effects of Climate Change</h4>
+    <div class="grid-2">
+      <div class="card blue">
+        <strong>Physical effects</strong>
+        <ul>
+          <li>Sea level rise → coastal flooding</li>
+          <li>More extreme weather events (storms, droughts)</li>
+          <li>Ice caps melting</li>
+          <li>Coral bleaching</li>
+          <li>Ecosystem disruption (timing of seasons shifts)</li>
+        </ul>
+      </div>
+      <div class="card purple">
+        <strong>Human effects</strong>
+        <ul>
+          <li>Flooding displaces millions (e.g. Bangladesh)</li>
+          <li>Water/food shortages in dry regions</li>
+          <li>Spread of diseases (malaria moving to higher altitudes)</li>
+          <li>Economic damage from extreme weather</li>
+          <li>New opportunities — farming in Arctic areas, new shipping routes</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Managing Climate Change</h4>
+    <div class="grid-2">
+      <div class="card green">
+        <strong>Mitigation (reducing causes)</strong>
+        <ul>
+          <li>Renewable energy (wind, solar, HEP)</li>
+          <li>Carbon capture and storage</li>
+          <li>Reforestation</li>
+          <li>International agreements (Paris Agreement 2015)</li>
+          <li>Energy efficiency in buildings/transport</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <strong>Adaptation (adjusting to effects)</strong>
+        <ul>
+          <li>Flood defences (sea walls, flood barriers)</li>
+          <li>Drought-resistant crops</li>
+          <li>Managed retreat of coastlines</li>
+          <li>Building designs to cope with heat/floods</li>
+          <li>Water conservation schemes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION B: THE LIVING WORLD -->
+  <!-- ============================================================ -->
+
+  <h2 class="liv">SECTION B — THE LIVING WORLD</h2>
+
+  <div class="section">
+    <h3>B1 · Ecosystems</h3>
+
+    <h4>Key Terms</h4>
+    <ul>
+      <li><strong>Ecosystem</strong> — a community of living organisms interacting with their non-living environment</li>
+      <li><strong>Producer</strong> — plants that photosynthesise (make their own food)</li>
+      <li><strong>Consumer</strong> — animals that eat producers or other animals</li>
+      <li><strong>Decomposer</strong> — break down dead matter (fungi, bacteria)</li>
+      <li><strong>Food chain/web</strong> — shows energy transfer between organisms</li>
+      <li><strong>Nutrient cycle</strong> — how nutrients move through ecosystem (living things → decomposers → soil → plants)</li>
+    </ul>
+    <div class="keybox">In a healthy ecosystem, if one part is removed, it affects ALL other parts. E.g. remove top predator → prey population explodes → plants are overgrazed → ecosystem collapses.</div>
+
+    <h4>Global Ecosystems (Biomes)</h4>
+    <p>Climate determines which biome exists where. Temperature and rainfall are the key controls.</p>
+    <table>
+      <tr><th>Biome</th><th>Climate</th><th>Location</th></tr>
+      <tr><td>Tropical Rainforest</td><td>Hot & wet all year</td><td>Around the equator</td></tr>
+      <tr><td>Hot Desert</td><td>Hot days, cold nights, very dry</td><td>~30°N/S of equator</td></tr>
+      <tr><td>Savanna Grassland</td><td>Hot, wet + dry seasons</td><td>Between rainforest & desert</td></tr>
+      <tr><td>Temperate Deciduous</td><td>Warm summers, mild winters</td><td>Western Europe, NE USA</td></tr>
+      <tr><td>Boreal Forest (Taiga)</td><td>Cold, some rain</td><td>Canada, Russia</td></tr>
+      <tr><td>Tundra</td><td>Very cold, very dry</td><td>Arctic fringe</td></tr>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>B2 · Tropical Rainforests</h3>
+
+    <h4>Characteristics</h4>
+    <ul>
+      <li>Found near the equator (0°–10° N/S) — e.g. Amazon, Congo, Borneo</li>
+      <li>Hot (~28°C) and wet (2000mm+ rain/year) all year round</li>
+      <li>Layered structure: emergent layer → canopy → understorey → forest floor</li>
+      <li><strong>Highest biodiversity</strong> on Earth — over 50% of all species</li>
+    </ul>
+
+    <h4>Plant Adaptations</h4>
+    <ul>
+      <li><strong>Drip-tip leaves</strong> — pointed tips so water drips off (prevents rot, fungal growth)</li>
+      <li><strong>Buttress roots</strong> — large roots at base support massive trees in shallow soil</li>
+      <li><strong>Smooth/waxy bark</strong> — sheds water quickly</li>
+      <li><strong>Epiphytes</strong> — plants that grow on other plants to reach sunlight (not parasitic)</li>
+    </ul>
+
+    <h4>Animal Adaptations</h4>
+    <ul>
+      <li>Bright colours (warning/camouflage in dappled light)</li>
+      <li>Prehensile tails / long limbs for life in canopy</li>
+      <li>Nocturnal species to avoid competition</li>
+    </ul>
+
+    <h4>Nutrient Cycle in TRF</h4>
+    <p>Nutrients cycle rapidly. Decomposition is fast (warm+wet). Most nutrients in <strong>biomass</strong> (living plants), NOT in the soil. So if trees are removed, the nutrient cycle breaks and soil becomes infertile quickly.</p>
+
+    <h4>Deforestation — Causes</h4>
+    <div class="grid-2">
+      <div class="card red">
+        <strong>Commercial farming</strong> — soya beans, cattle ranching (Brazil)
+      </div>
+      <div class="card orange">
+        <strong>Logging</strong> — hardwood timber (mahogany, teak) for export
+      </div>
+      <div class="card blue">
+        <strong>Mining</strong> — iron ore, gold (Amazon)
+      </div>
+      <div class="card purple">
+        <strong>Road building</strong> — opens up access to more forest; settlement follows
+      </div>
+    </div>
+
+    <h4>Impacts of Deforestation</h4>
+    <ul>
+      <li>Loss of biodiversity (species extinction)</li>
+      <li>Soil erosion — roots no longer hold soil; heavy rain washes it away</li>
+      <li>Increased CO₂ — trees no longer absorb it; burning releases it → climate change</li>
+      <li>Indigenous people lose their homes and culture</li>
+      <li>Changes to water cycle — less transpiration → less rainfall</li>
+    </ul>
+
+    <div class="casebox">
+      <strong>Amazon Rainforest, Brazil</strong><br>
+      17% deforested since 1970. Causes: cattle ranching (70% of cleared land), soya farming, mining (Carajás iron ore), BR-163 highway. Government introduced fines for illegal logging; REDD+ scheme pays countries to protect forest; sustainable logging (FSC certified timber); ecotourism provides income without destroying forest.
+    </div>
+
+    <h4>Sustainable Management</h4>
+    <ul>
+      <li><strong>Selective logging</strong> — only mature trees cut, rest left standing</li>
+      <li><strong>Agroforestry</strong> — trees grown alongside crops, maintains soil</li>
+      <li><strong>Ecotourism</strong> — income from tourists visiting forest, no destruction</li>
+      <li><strong>Debt relief</strong> — rich countries cancel debts if poor countries protect forests</li>
+      <li><strong>REDD+</strong> — UN scheme paying developing nations to reduce deforestation</li>
+      <li><strong>National Parks / reserves</strong> — protected areas with legal status</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>B3 · Hot Deserts <small style="font-size:9pt;font-weight:400;">(study if your school chose this option)</small></h3>
+
+    <h4>Characteristics</h4>
+    <ul>
+      <li>Receive less than 250mm rainfall per year</li>
+      <li>Extreme temperatures — very hot days (50°C+), cold nights</li>
+      <li>Found ~30° N/S of equator (high pressure zones — sinking dry air)</li>
+      <li>Example: Sahara (Africa), Sonoran (USA/Mexico), Arabian Desert</li>
+    </ul>
+
+    <h4>Plant Adaptations</h4>
+    <ul>
+      <li><strong>Cacti</strong> — thick waxy skin (reduces water loss), spines (not leaves), stores water in stem, shallow wide roots catch rain quickly</li>
+      <li><strong>Succulents</strong> — store water in fleshy leaves/stems</li>
+      <li><strong>Deep roots</strong> (e.g. mesquite tree) — reach underground water</li>
+      <li>Seeds that lie dormant for years, germinate only when it rains</li>
+    </ul>
+
+    <h4>Animal Adaptations</h4>
+    <ul>
+      <li>Nocturnal — active at night to avoid heat</li>
+      <li>Camels — store fat in hump (not water), thick eyelashes, wide feet, concentrate urine</li>
+      <li>Fennec fox — large ears dissipate heat</li>
+    </ul>
+
+    <h4>Development Opportunities in Deserts</h4>
+    <ul>
+      <li><strong>Mineral extraction</strong> — oil (Saudi Arabia), copper, gold</li>
+      <li><strong>Energy</strong> — solar power (intense sunlight), wind power</li>
+      <li><strong>Tourism</strong> — unique landscapes attract tourists (Sahara safaris)</li>
+      <li><strong>Farming</strong> — irrigation schemes (e.g. Colorado River, Nile)</li>
+    </ul>
+
+    <h4>Challenges of Desert Development</h4>
+    <ul>
+      <li>Extreme heat makes working difficult</li>
+      <li>Water scarcity — expensive to import/desalinate</li>
+      <li>Inaccessibility — sparse infrastructure, high transport costs</li>
+      <li>Fragile ecosystem — easily damaged, slow to recover</li>
+    </ul>
+
+    <div class="casebox">
+      <strong>Thar Desert, India — Development & Challenges</strong><br>
+      Indira Gandhi Canal brings water for irrigation → farming, settlement. Mineral reserves (feldspar, gypsum). Wind/solar farms expanding. Challenges: salinisation of soils from irrigation, overgrazing leading to desertification, over-extraction of groundwater.
+    </div>
+
+    <h4>Desertification</h4>
+    <p>The process by which land at the edge of a desert becomes desert-like and unproductive.</p>
+    <ul>
+      <li><strong>Causes:</strong> overgrazing, deforestation, climate change (less rain), over-cultivation, population pressure</li>
+      <li><strong>Management:</strong> tree planting (Great Green Wall project across Africa), water conservation, soil conservation, education about land use, appropriate technology</li>
+    </ul>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION C: PHYSICAL LANDSCAPES UK -->
+  <!-- ============================================================ -->
+
+  <h2 class="phys">SECTION C — PHYSICAL LANDSCAPES IN THE UK</h2>
+
+  <div class="section">
+    <h3>C1 · Coastal Landscapes in the UK</h3>
+
+    <h4>Coastal Processes</h4>
+    <div class="grid-2">
+      <div class="card red">
+        <strong>Erosion processes (HHAC)</strong>
+        <ul>
+          <li><strong>Hydraulic action</strong> — force of water/air compresses into cracks, breaking rock apart</li>
+          <li><strong>Abrasion</strong> — sand and pebbles scrape/grind rock face</li>
+          <li><strong>Attrition</strong> — rocks/pebbles knock against each other, getting smaller and rounder</li>
+          <li><strong>Corrosion</strong> — chemical weathering, acid in seawater dissolves limestone</li>
+        </ul>
+      </div>
+      <div class="card blue">
+        <strong>Transportation (STSC)</strong>
+        <ul>
+          <li><strong>Solution</strong> — dissolved minerals carried in water</li>
+          <li><strong>Suspension</strong> — fine particles carried in water</li>
+          <li><strong>Saltation</strong> — material bounced along seabed</li>
+          <li><strong>Traction</strong> — large boulders rolled along seabed</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:8px;"><strong>Longshore drift</strong> — waves hit beach at an angle (swash), backwash goes straight back. Material transported along the coast in a zigzag pattern. Direction depends on prevailing wind.</p>
+    <div class="keybox">Swash = up the beach at an angle. Backwash = straight back perpendicular. This is how material moves along the coast.</div>
+
+    <h4>Erosional Landforms</h4>
+    <table>
+      <tr><th>Landform</th><th>How it forms</th></tr>
+      <tr><td><strong>Headland &amp; Bay</strong></td><td>Alternating hard and soft rock. Soft rock erodes faster → bay. Hard rock resists → headland protrudes.</td></tr>
+      <tr><td><strong>Cave → Arch → Stack → Stump</strong></td><td>Waves erode crack in headland → cave. Erosion from both sides → arch. Arch collapses → stack. Stack erodes → stump.</td></tr>
+      <tr><td><strong>Wave-cut platform</strong></td><td>Cliff eroded at base → notch → cliff collapses → platform left behind at sea level</td></tr>
+    </table>
+
+    <h4>Depositional Landforms</h4>
+    <table>
+      <tr><th>Landform</th><th>How it forms</th></tr>
+      <tr><td><strong>Beach</strong></td><td>Sand/pebbles deposited when waves lose energy</td></tr>
+      <tr><td><strong>Spit</strong></td><td>Longshore drift extends a beach beyond a bend in the coastline. End curves due to secondary wind. May form across a bay.</td></tr>
+      <tr><td><strong>Bar</strong></td><td>Spit grows all the way across a bay, enclosing a lagoon</td></tr>
+      <tr><td><strong>Sand dunes</strong></td><td>Wind deposits sand above high tide mark; marram grass stabilises</td></tr>
+    </table>
+
+    <h4>Coastal Management Strategies</h4>
+    <div class="grid-2">
+      <div class="card red">
+        <strong>Hard Engineering</strong>
+        <ul>
+          <li><strong>Sea wall</strong> — reflects waves, expensive (£2,000/m), lasts ~30 yrs</li>
+          <li><strong>Groynes</strong> — wooden fences trap sediment, prevents longshore drift removing beach</li>
+          <li><strong>Rock armour (rip rap)</strong> — large boulders absorb wave energy, cheap but ugly</li>
+          <li><strong>Offshore breakwater</strong> — rocks offshore, waves break before reaching shore</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <strong>Soft Engineering</strong>
+        <ul>
+          <li><strong>Beach nourishment</strong> — sand pumped from offshore to replace eroded beach. Natural-looking but needs repeating.</li>
+          <li><strong>Managed retreat</strong> — allow flooding of low-value land, creates saltmarsh that absorbs wave energy. Cheap, sustainable.</li>
+          <li><strong>Dune stabilisation</strong> — plant marram grass to hold dunes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="casebox">
+      <strong>Holderness Coast, Yorkshire — Rapid Erosion</strong><br>
+      Fastest eroding coast in Europe (~2m/year). Soft boulder clay easily eroded. Settlements at risk: Mappleton protected with rock groynes (1991, £2m) — saved village but accelerated erosion south of Mappleton. Spurn Head at risk. Debate: protect everywhere vs managed retreat.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>C2 · River Landscapes in the UK</h3>
+
+    <h4>River Processes</h4>
+    <ul>
+      <li><strong>Erosion</strong> — Hydraulic action, Abrasion, Attrition, Corrosion (same as coasts)</li>
+      <li><strong>Transportation</strong> — Traction, Saltation, Suspension, Solution</li>
+      <li><strong>Deposition</strong> — when river loses energy (e.g. velocity decreases), it drops sediment — heaviest first</li>
+    </ul>
+
+    <h4>Long Profile & Cross Profile</h4>
+    <ul>
+      <li><strong>Upper course</strong> — steep gradient, fast flow in small channel, V-shaped valley, lots of vertical erosion</li>
+      <li><strong>Middle course</strong> — gentler gradient, lateral (sideways) erosion, wider valley, meanders form</li>
+      <li><strong>Lower course</strong> — very gentle gradient, wide flat floodplain, lots of deposition, mouth/estuary</li>
+    </ul>
+
+    <h4>Landforms — Upper Course</h4>
+    <table>
+      <tr><th>Landform</th><th>Formation</th></tr>
+      <tr><td><strong>Waterfall</strong></td><td>River flows over hard rock onto soft rock. Soft rock undercut by hydraulic action/abrasion → forms plunge pool. Overhang collapses. Waterfall retreats upstream leaving a gorge.</td></tr>
+      <tr><td><strong>Gorge</strong></td><td>Narrow steep-sided valley left behind as waterfall retreats</td></tr>
+      <tr><td><strong>Interlocking spurs</strong></td><td>River winds around hard rock outcrops in V-shaped valley</td></tr>
+    </table>
+
+    <h4>Landforms — Middle & Lower Course</h4>
+    <table>
+      <tr><th>Landform</th><th>Formation</th></tr>
+      <tr><td><strong>Meanders</strong></td><td>Water flows faster on outer bank (erosion = river cliff) and slower on inner bank (deposition = slip-off slope/point bar)</td></tr>
+      <tr><td><strong>Ox-bow lake</strong></td><td>Meander neck eroded through during flood. River takes straight course. Old meander cut off. Evaporation forms ox-bow lake.</td></tr>
+      <tr><td><strong>Floodplain</strong></td><td>Flat land either side of river, built up from sediment deposited in repeated floods. Very fertile.</td></tr>
+      <tr><td><strong>Levées</strong></td><td>Natural embankments of deposited material along river banks (heaviest material deposited first as river slows during flooding)</td></tr>
+      <tr><td><strong>Estuary/delta</strong></td><td>Where river meets sea. Sediment deposited. Tidal. May form delta if river drops more sediment than sea removes.</td></tr>
+    </table>
+
+    <h4>Factors Affecting Flood Risk</h4>
+    <div class="grid-2">
+      <div class="card orange">
+        <strong>Increases flood risk</strong>
+        <ul>
+          <li>Heavy/prolonged rainfall</li>
+          <li>Impermeable rock/soil</li>
+          <li>Urbanisation (concrete = no infiltration)</li>
+          <li>Deforestation (less interception)</li>
+          <li>Steep slopes (fast run-off)</li>
+          <li>Saturated ground</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <strong>Decreases flood risk</strong>
+        <ul>
+          <li>Permeable rock (water soaks in)</li>
+          <li>Vegetation (interception + transpiration)</li>
+          <li>Gentle slopes (slow run-off)</li>
+          <li>Dry ground (can absorb water)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>River Management</h4>
+    <div class="grid-2">
+      <div class="card red">
+        <strong>Hard Engineering</strong>
+        <ul>
+          <li><strong>Dams &amp; reservoirs</strong> — control water flow, provide water/HEP, but flood land, displace people</li>
+          <li><strong>Flood relief channels</strong> — divert excess water away from towns</li>
+          <li><strong>Embankments</strong> — raise river banks</li>
+          <li><strong>Channel straightening</strong> — water moves faster away from settlements</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <strong>Soft Engineering</strong>
+        <ul>
+          <li><strong>Flood warnings</strong> — Environment Agency alerts</li>
+          <li><strong>Flood plain zoning</strong> — no building on floodplain</li>
+          <li><strong>Afforestation</strong> — plant trees in catchment to intercept rain</li>
+          <li><strong>River restoration</strong> — re-meander rivers, create wetlands</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="casebox">
+      <strong>Boscastle Flash Flood 2004, Cornwall, UK</strong><br>
+      200mm rain fell in 24 hours (normally 75mm in August). Steep impermeable valley, saturated ground. River Valency burst banks. 100 cars washed out to sea, buildings destroyed. No deaths (rapid helicopter rescue). Responses: new flood channel, culverts widened, car park moved to higher ground.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- EXAM TIPS -->
+  <h2 class="nat" style="background:#1a1a2e;">EXAM TIPS — READ BEFORE YOU SIT</h2>
+  <div class="grid-2">
+    <div class="card blue">
+      <strong>Question command words</strong>
+      <ul>
+        <li><strong>State/Name/Identify</strong> — one word/phrase answer</li>
+        <li><strong>Describe</strong> — what it looks like (use data/figures)</li>
+        <li><strong>Explain</strong> — say WHY / HOW (use "because", "which means", "therefore")</li>
+        <li><strong>Assess/Evaluate/Discuss</strong> — give both sides + a conclusion</li>
+        <li><strong>To what extent</strong> — make a judgement with evidence</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <strong>Mark allocation guide</strong>
+      <ul>
+        <li><strong>1–2 marks</strong> — one/two facts. No explanation needed.</li>
+        <li><strong>4 marks</strong> — two developed points (point + explanation each)</li>
+        <li><strong>6 marks</strong> — structured answer using a figure + own knowledge. Two or three linked points per side.</li>
+        <li><strong>9 marks</strong> — full essay. Introduction, 2–3 paragraphs, conclusion. <strong>SPaG marks here</strong> — spell properly!</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <strong>Case study rules</strong>
+      <ul>
+        <li>Always name specific places, dates, and figures</li>
+        <li>Know one LIC/NEE and one HIC example for tectonic hazards and tropical storms</li>
+        <li>For 9-mark questions: use case studies to back up every argument</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <strong>Common mistakes to avoid</strong>
+      <ul>
+        <li>Confusing erosion types (hydraulic action ≠ abrasion)</li>
+        <li>Saying conservative margins have volcanoes — they DON'T</li>
+        <li>Describing when asked to explain (always say WHY)</li>
+        <li>Corrie = rotational slip, NOT just "ice melting"</li>
+        <li>Forgetting to use data from figures in 6-mark questions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="keybox" style="margin-top:20px; font-size:11pt;">
+    Paper 1 is 1 hour 30 minutes. Section A = Natural Hazards. Section B = Living World. Section C = Physical Landscapes UK. You MUST answer ALL sections. Plan ~30 mins per section. Leave 5 mins to check spellings in 9-mark answers.
+  </div>
+
+  <p style="text-align:center; margin-top:28px; color:#999; font-size:9pt;">AQA GCSE Geography 8035/1 · Revision Notes · Good luck! 🍀</p>
+
+</div>
+
+</body>
+</html>
